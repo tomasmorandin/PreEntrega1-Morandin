@@ -1,20 +1,12 @@
-import TestCounter from "../count/TestCounter"
+import './ItemListContainer.css'
 
-export default function ItemListContainer({greeting}) {
-
-  const styleGreeting = {
-    fontSize: '20px',
-    color: '#FFAB11',
-    fontWeight: 'bold',
-    margin: 20,
-    display: 'flex',
-    justifyContent: 'center',
-  }
+export default function ItemListContainer({children, greeting}) {
 
     return (
       <>
       <section>
-        <p style={styleGreeting}>{greeting}</p>
+        <p className="greeting">{greeting}</p>
+        {children}
         </section>
       </>
     )

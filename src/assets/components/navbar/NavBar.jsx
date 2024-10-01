@@ -1,7 +1,7 @@
 import './NavBar.css'
 import CartWidget from '../cart_widget/CartWidget'
-import Menu from './Menu'
 import Brand from './Brand'
+import { NavLink } from 'react-router-dom'
 
 export default function NavBar() {
     return (
@@ -14,9 +14,15 @@ export default function NavBar() {
     </button>
     <div className="collapse navbar-collapse" id="collapsibleNavbar">
       <ul className="navbar-nav mx-auto">
-        <Menu title='Pilas'/>
-        <Menu title='Baterias'/>
-        <Menu title='Controles'/>
+      <li className="nav-item">
+         <NavLink to={'/category/pilas'} className="nav-link mx-4">Pilas</NavLink>
+         </li>
+      <li className="nav-item">
+         <NavLink to={'/category/baterias'} className="nav-link mx-4">Baterias</NavLink>
+         </li>
+      <li className="nav-item">
+         <NavLink to={'/category/controles'} className="nav-link mx-4">Controles</NavLink>
+         </li>
       </ul>
       <CartWidget valor={0}/>
     </div>
@@ -26,4 +32,25 @@ export default function NavBar() {
     )
   }
 
-  
+//   const productos =[
+//     {id: 1,
+//         nombre: 'remera',
+//     },
+//     {id: 2,
+//         nombre: 'pantalon',
+//     },
+//     {id: 2,
+//         nombre: 'pantalon',
+//     },
+// ];
+
+// const promesa = new Promise((resolve, reject) => {
+//     setTimeout(()=> {
+//         resolve (productos);
+//     }, 2000);
+// })
+
+// promesa
+// .then( result=> console.log(productos))
+// .catch(error=> console.log ('error'))
+// .finally(()=> console.log('Todo Termino'))

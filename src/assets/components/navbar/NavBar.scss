@@ -17,17 +17,29 @@ $fontsize4: 18px;
 $height1: 700px;
 $height2: 80px;
 
+
 .navbar{
     background-color: $color5;
     color: $color1;
     font-size: $fontsize4;
     border-bottom: 0.5px solid white;
     backdrop-filter: blur(12px);
-    z-index: 999;
-
+    position: fixed;
+    z-index: 9999;
+    
     .collapse{
         background-color: #031A51;
         margin-bottom: 5px;
+
+        .nav-link{
+            transition: all 0.5s;
+            color: $color1;
+        }
+        .nav-link:hover{
+            transform: scale(1.05);
+            color: $color4;
+        }
     }
+
 }
 
